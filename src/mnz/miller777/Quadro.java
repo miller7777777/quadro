@@ -31,7 +31,11 @@ public class Quadro {
         c = Double.parseDouble(reader.readLine());
             double d = b * b - 4 * a * c;
 
-            if(a < QUALITY){
+            if(Math.abs(a) < QUALITY && Math.abs(b) < QUALITY){
+
+                System.out.println("Нет корней. Никаких.");
+
+            }else if(a < QUALITY){
 
                 x1 = - c / b;
                 System.out.println("x = " + x1);
